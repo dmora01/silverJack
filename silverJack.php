@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Lab 3</title>
 	</head>
 
 	<body>
