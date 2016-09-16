@@ -5,10 +5,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Silver Jack</title>
 	</head>
+	
+	<main>
+		<body>
 
-	<body>
-
-	</body>
+		</body>
+	</main>
+	
+	<footer>
+		
+	</footer>
 </html>
