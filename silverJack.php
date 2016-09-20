@@ -15,12 +15,13 @@ function displayRandomCard(){
   
   $randomSuitIndex = rand(0,3);
   $randomSuit = $suits[$randomSuitIndex];      
-  echo "<img src='img/cards/$randomSuit/" . rand(1,13). ".png' />";
+  
 }
 function displayHand(){
 	for($i = 0; $i < 4; $i++){
 		getHand($i);
 	}
+	
 }
 ?>
 
