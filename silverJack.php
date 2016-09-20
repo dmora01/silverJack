@@ -17,12 +17,15 @@ function displayRandomCard(){
   $randomSuit = $suits[$randomSuitIndex];      
   
 }
+function getHand(){
+	
+}
 function displayHand(){
 	for($i = 0; $i < 4; $i++){
 		getHand($i);
 	}
-	
 }
+
 ?>
 
 <!DOCTYPE html>
