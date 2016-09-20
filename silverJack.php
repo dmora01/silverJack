@@ -36,6 +36,11 @@ function displayHand(){
     <body>
         
         <?=displayRandomCard() ?>
+        <footer>
+        	&copy; Mora, Bharat, Galvan, 2016. <br /> Disclaimer: The information on this page might not be accurate. It's used for academic purposes
+        <br /><br /><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/CSUMB_Athletics_logo.png/200px-CSUMB_Athletics_logo.png" id="csumb">
+        </footer>
 
     </body>
+    
 </html>
