@@ -1,9 +1,9 @@
 <?php
-
-function displayRandomCard() 
-{
-  $deck = array();
-  $usedCards = array();
+$deck = array();
+$usedCards = array();
+$suits = array("clubs", "diamonds", "hearts", "spades");
+$players = array("Player1", "Player2", "Player3", "Player4");
+function displayRandomCard(){
   
   for ($i = 1; $i <= 52; $i++) 
   {
@@ -12,12 +12,16 @@ function displayRandomCard()
   
   shuffle($deck);
  
-  $suits = array("clubs", "diamonds", "hearts", "spades");
+  
   $randomSuitIndex = rand(0,3);
   $randomSuit = $suits[$randomSuitIndex];      
   echo "<img src='img/cards/$randomSuit/" . rand(1,13). ".png' />";
 }
-
+function displayHand(){
+	for($i = 0; $i < 4; $i++){
+		getHand($i);
+	}
+}
 ?>
 
 <!DOCTYPE html>
