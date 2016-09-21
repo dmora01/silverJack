@@ -17,6 +17,7 @@ function displayRandomCard()
   
   shuffle($deck);
   getCards();
+  displayHand();
 }
 function getCards()
 {
@@ -94,7 +95,9 @@ function getCards()
 }
 function getHand($playerNum)
 {
-    $flag = false;
+    $total = 0;
+    $temp = rand(0, 3);
+    $hold = rand(1, 13);
     
 	if ($playerNum == 0)
 	{
@@ -102,21 +105,100 @@ function getHand($playerNum)
 	    {
 	        foreach ($usedCards as $x => $x_value)
 	        {
-	            if ($player1[$x] == $x_value && array_key_exists($x, $player1) == true)
-	            {
-	                $flag = true;
-	            }
+	            $total += $x_value;
 	        }
 	        
-	        if ($flag == false)
+	        if ($total <= 35)
 	        {
-	            
+	            while ($total <= 35)
+	            {
+	                if ($player1[$temp] != $usedCards[$temp] && array_keys($player1, $suits[$temp]) != array_keys($usedCards, $suits[$temp]))
+	                {
+	                    $player1[$suits[$temp]] = $hold;
+	                    $usedCards[$suits[$temp]] = $hold;
+	                    
+	                    $temp = rand(0, 3);
+	                    $hold = rand(1, 13);
+	                }
+	            }
+	        }
+	        else 
+	        {
+	            return;
 	        }
 	    }
+	    
+	    return;
+	}
+	else if ($playerNum == 1)
+	{
+	    if (count($usedCards) != 0)
+	    {
+	        foreach ($usedCards as $x => $x_value)
+	        {
+	            $total += $x_value;
+	        }
+	        
+	        if ($total <= 35)
+	        {
+	            while ($total <= 35)
+	            {
+	                if ($player2[$temp] != $usedCards[$temp] && array_keys($player2, $suits[$temp]) != array_keys($usedCards, $suits[$temp]))
+	                {
+	                    $player2[$suits[$temp]] = $hold;
+	                    $usedCards[$suits[$temp]] = $hold;
+	                    
+	                    $temp = rand(0, 3);
+	                    $hold = rand(1, 13);
+	                }
+	            }
+	        }
+	        else 
+	        {
+	            return;
+	        }
+	    }
+	    
+	    return;
+	}
+	else if ($playerNum == 2)
+	{
+	    if (count($usedCards) != 0)
+	    {
+	        foreach ($usedCards as $x => $x_value)
+	        {
+	            $total += $x_value;
+	        }
+	        
+	        if ($total <= 35)
+	        {
+	            while ($total <= 35)
+	            {
+	                if ($player3[$temp] != $usedCards[$temp] && array_keys($player3, $suits[$temp]) != array_keys($usedCards, $suits[$temp]))
+	                {
+	                    $player3[$suits[$temp]] = $hold;
+	                    $usedCards[$suits[$temp]] = $hold;
+	                    
+	                    $temp = rand(0, 3);
+	                    $hold = rand(1, 13);
+	                }
+	            }
+	        }
+	        else 
+	        {
+	            return;
+	        }
+	    }
+	    
+	    return;
+	}
+	else
+	{
+	    return;
 	}
 }
 function displayHand(){
-	for($i = 0; $i < 4; $i++){
+	for($i = 0; $i < 3; $i++){
 		getHand($i);
 	}
 }
