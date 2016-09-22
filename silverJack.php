@@ -203,12 +203,29 @@ function displayHand(){
 	}
 }
 
+<<<<<<< HEAD
+function displayWinner()
+{
+	echo "<form action='silverJack.php'>";
+
+	echo "</form>";
+	
+}
+
+
+
+
+=======
+>>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Silver Jack</title>
+        
+           <link rel="stylesheet" href="css/silverJ.css" type="text/css" />
+
     </head>
     <body>
         
