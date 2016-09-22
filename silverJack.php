@@ -203,7 +203,6 @@ function displayHand(){
 	}
 }
 
-<<<<<<< HEAD
 function displayWinner()
 {
 	echo "<form action='silverJack.php'>";
@@ -211,12 +210,6 @@ function displayWinner()
 	echo "</form>";
 	
 }
-
-
-
-
-=======
->>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
