@@ -26,9 +26,9 @@ function getCards()
     
     for ($i = 0; $i < 4; $i++)
     {
-        foreach ($usedCards as $x => $x_value)
+        foreach ($usedCards as $x => $x_value) //Looking for cards used and comparing it with player 1's hand
 	   {
-	       if ($player1[$x] != $x_value && array_key_exists($x, $player1) != true)
+	       if ($player1[$x] != $x_value && array_key_exists($x, $player1) != true) // Checking for prexisting cards
 	       {
 	           $player1[$suits[$temp]] = $hold;
 	           $usedCards[$suits[$temp]] = $hold;
@@ -44,9 +44,9 @@ function getCards()
     
     for ($i = 0; $i < 4; $i++)
     {
-        foreach ($usedCards as $x => $x_value)
+        foreach ($usedCards as $x => $x_value) //Looking for cards used and comparing it with player 2's hand
 	   {
-	       if ($player2[$x] != $x_value && array_key_exists($x, $player2) != true)
+	       if ($player2[$x] != $x_value && array_key_exists($x, $player2) != true) // Checking for prexisting cards
 	       {
 	           $player2[$suits[$temp]] = $hold;
 	           $usedCards[$suits[$temp]] = $hold;
@@ -62,9 +62,9 @@ function getCards()
     
     for ($i = 0; $i < 4; $i++)
     {
-        foreach ($usedCards as $x => $x_value)
+        foreach ($usedCards as $x => $x_value) //Looking for cards used and comparing it with player 3's hand
 	   {
-	       if ($player3[$x] != $x_value && array_key_exists($x, $player3) != true)
+	       if ($player3[$x] != $x_value && array_key_exists($x, $player3) != true) // Checking for prexisting cards
 	       {
 	           $player3[$suits[$temp]] = $hold;
 	           $usedCards[$suits[$temp]] = $hold;
@@ -80,9 +80,9 @@ function getCards()
     
     for ($i = 0; $i < 4; $i++)
     {
-        foreach ($usedCards as $x => $x_value)
+        foreach ($usedCards as $x => $x_value) //Looking for cards used and comparing it with user's hand
 	   {
-	       if ($user[$x] != $x_value && array_key_exists($x, $user) != true)
+	       if ($user[$x] != $x_value && array_key_exists($x, $user) != true) // Checking for prexisting cards
 	       {
 	           $user[$suits[$temp]] = $hold;
 	           $usedCards[$suits[$temp]] = $hold;
@@ -103,7 +103,7 @@ function getHand($playerNum)
 	{
 	    if (count($usedCards) != 0)
 	    {
-	        foreach ($usedCards as $x => $x_value)
+	        foreach ($player1 as $x => $x_value)
 	        {
 	            $total += $x_value;
 	        }
@@ -134,7 +134,7 @@ function getHand($playerNum)
 	{
 	    if (count($usedCards) != 0)
 	    {
-	        foreach ($usedCards as $x => $x_value)
+	        foreach ($player2 as $x => $x_value)
 	        {
 	            $total += $x_value;
 	        }
@@ -165,7 +165,7 @@ function getHand($playerNum)
 	{
 	    if (count($usedCards) != 0)
 	    {
-	        foreach ($usedCards as $x => $x_value)
+	        foreach ($player3 as $x => $x_value)
 	        {
 	            $total += $x_value;
 	        }
@@ -217,12 +217,29 @@ function displayHand(){
     }
 }
 
+<<<<<<< HEAD
+function displayWinner()
+{
+	echo "<form action='silverJack.php'>";
+
+	echo "</form>";
+	
+}
+
+
+
+
+=======
+>>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Silver Jack</title>
+        
+           <link rel="stylesheet" href="css/silverJ.css" type="text/css" />
+
     </head>
     <body>
         
