@@ -198,9 +198,23 @@ function getHand($playerNum)
 	}
 }
 function displayHand(){
-	for($i = 0; $i < 3; $i++){
-		getHand($i);
-	}
+    $total = 0;
+    foreach($player1 as $x => $x_value){
+        $total += $x_value;
+        echo "<img src='img/cards/". $x .   "/" . $x_value . ".png' />";
+    }
+    foreach($player2 as $x => $x_value){
+        $total += $x_value;
+        echo "<img src='img/cards/". $x .   "/" . $x_value . ".png' />";
+    }
+    foreach($player3 as $x => $x_value){
+        $total += $x_value;
+        echo "<img src='img/cards/". $x .   "/" . $x_value . ".png' />";
+    }
+    foreach($user as $x => $x_value){
+        $total += $x_value;
+        echo "<img src='img/cards/". $x .   "/" . $x_value . ".png' />";
+    }
 }
 
 function displayWinner()
