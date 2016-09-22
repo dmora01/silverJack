@@ -193,6 +193,37 @@ function getHand($playerNum)
 	    
 	    return;
 	}
+	else if ($playerNum == 3)
+	{
+	    if (count($usedCards) != 0)
+	    {
+	        foreach ($user as $x => $x_value)
+	        {
+	            $total += $x_value;
+	        }
+	        
+	        if ($total <= 35)
+	        {
+	            while ($total <= 35)
+	            {
+	                if ($user[$temp] != $usedCards[$temp] && array_keys($user, $suits[$temp]) != array_keys($usedCards, $suits[$temp]))
+	                {
+	                    $user[$suits[$temp]] = $hold;
+	                    $usedCards[$suits[$temp]] = $hold;
+	                    
+	                    $temp = rand(0, 3);
+	                    $hold = rand(1, 13);
+	                }
+	            }
+	        }
+	        else 
+	        {
+	            return;
+	        }
+	    }
+	    
+	    return;
+	}
 	else
 	{
 	    return;
