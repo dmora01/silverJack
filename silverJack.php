@@ -25,7 +25,12 @@ function getCards()
     $temp = rand(0, 3);
     $hold = rand(1, 13);
     
-    for ($i = 0; $i < 4; $i++)
+    $player1[$suits[$temp]] = $hold;
+    
+    $temp = rand(0, 3);
+    $hold = rand(1, 13);
+    
+    for ($i = 1; $i < 4; $i++)
     {
         foreach ($usedCards as $x => $x_value) //Looking for cards used and comparing it with player 1's hand
 	   {
