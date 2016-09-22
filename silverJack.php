@@ -17,6 +17,7 @@ function displayRandomCard()
   
   shuffle($deck);
   getCards();
+  getHand();
   displayHand();
 }
 function getCards()
