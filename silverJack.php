@@ -273,6 +273,10 @@ function displayRandomCard()
     }
     echo $amount;
     echo "<br />";
+    $player1total = 0;
+    $player2total = 0;
+    $player3total = 0;
+    $usertotal = 0;
     for($i = 0; $i < count($player1Cards); $i++)
     {
         if($player1Cards[$i] >= 1 && $player1Cards[$i] <= 13)
@@ -296,6 +300,7 @@ function displayRandomCard()
             //spades
             echo "<img src='img/cards/spades/" . ($player1Cards[$i] % 13 + 1). ".png' />";
         }
+        $player1total += ($player1Cards[$i] % 13 + 1);
     }
     echo "<br />";
     for($i = 0; $i < count($player2Cards); $i++)
@@ -321,6 +326,7 @@ function displayRandomCard()
             //spades
             echo "<img src='img/cards/spades/" . ($player2Cards[$i] % 13 + 1). ".png' />";
         }
+        $player2total += ($player2Cards[$i] % 13 + 1);
     }
     echo "<br />";
     for($i = 0; $i < count($player3Cards); $i++)
@@ -346,6 +352,7 @@ function displayRandomCard()
             //spades
             echo "<img src='img/cards/spades/" . ($player3Cards[$i] % 13 + 1). ".png' />";
         }
+        $player3total += ($player3Cards[$i] % 13 + 1);
     }
     echo "<br />";
     for($i = 0; $i < count($user); $i++)
@@ -371,6 +378,7 @@ function displayRandomCard()
             //spades
             echo "<img src='img/cards/spades/" . ($user[$i] % 13 + 1). ".png' />";
         }
+        $usertotal += ($user[$i] % 13 + 1);
     }
 }
 
