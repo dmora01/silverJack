@@ -271,74 +271,158 @@ function displayRandomCard()
     	}
     }
     echo $amount;
+    echo "<br />";
+    for($i = 0; $i < count($player1Cards); $i++)
+    {
+        if($player1Cards[$i] >= 1 && $player1Cards[$i] <= 13)
+        {
+            echo "<img src='img/cards/clubs/" . ($player1Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player1Cards[$i] >= 14 && $player1Cards[$i] <= 26)
+        {
+            //diamonds
+            echo "<img src='img/cards/diamonds/" . ($player1Cards[$i] % 13 + 1). ".png' />";
+        }
+        if($player1Cards[$i] >= 27 && $player1Cards[$i] <= 39)
+        {
+            //hearts
+            echo "<img src='img/cards/hearts/" . ($player1Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player1Cards[$i] >= 40 && $player1Cards[$i] <= 52)
+        {
+            //spades
+            echo "<img src='img/cards/spades/" . ($player1Cards[$i] % 13 + 1). ".png' />";
+        }
+    }
+    echo "<br />";
+    for($i = 0; $i < count($player2Cards); $i++)
+    {
+        if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13)
+        {
+            echo "<img src='img/cards/clubs/" . ($player2Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player2Cards[$i] >= 14 && $player2Cards[$i] <= 26)
+        {
+            //diamonds
+            echo "<img src='img/cards/diamonds/" . ($player2Cards[$i] % 13 + 1). ".png' />";
+        }
+        if($player2Cards[$i] >= 27 && $player2Cards[$i] <= 39)
+        {
+            //hearts
+            echo "<img src='img/cards/hearts/" . ($player2Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player2Cards[$i] >= 40 && $player2Cards[$i] <= 52)
+        {
+            //spades
+            echo "<img src='img/cards/spades/" . ($player2Cards[$i] % 13 + 1). ".png' />";
+        }
+    }
+    echo "<br />";
+    for($i = 0; $i < count($player3Cards); $i++)
+    {
+        if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13)
+        {
+            echo "<img src='img/cards/clubs/" . ($player3Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player3Cards[$i] >= 14 && $player3Cards[$i] <= 26)
+        {
+            //diamonds
+            echo "<img src='img/cards/diamonds/" . ($player3Cards[$i] % 13 + 1). ".png' />";
+        }
+        if($player3Cards[$i] >= 27 && $player3Cards[$i] <= 39)
+        {
+            //hearts
+            echo "<img src='img/cards/hearts/" . ($player3Cards[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($player3Cards[$i] >= 40 && $player3Cards[$i] <= 52)
+        {
+            //spades
+            echo "<img src='img/cards/spades/" . ($player3Cards[$i] % 13 + 1). ".png' />";
+        }
+    }
+    echo "<br />";
+    for($i = 0; $i < count($user); $i++)
+    {
+        if($user[$i] >= 1 && $user[$i] <= 13)
+        {
+            echo "<img src='img/cards/clubs/" . ($user[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($user[$i] >= 14 && $user[$i] <= 26)
+        {
+            //diamonds
+            echo "<img src='img/cards/diamonds/" . ($user[$i] % 13 + 1). ".png' />";
+        }
+        if($user[$i] >= 27 && $user[$i] <= 39)
+        {
+            //hearts
+            echo "<img src='img/cards/hearts/" . ($user[$i] % 13 + 1). ".png' />";
+            
+        }
+        if($user[$i] >= 40 && $user[$i] <= 52)
+        {
+            //spades
+            echo "<img src='img/cards/spades/" . ($user[$i] % 13 + 1). ".png' />";
+        }
+    }
 }
 function displayHand()
 {
-    for($i = 0; $i < count($player1Cards); $i++){
-        if($player1Cards[$i] >= 1 && $player1Cards[$i] <= 13){
-            //clubs
-        }
-        if($player1Cards[$i] >= 14 && $player1Cards[$i] <= 26){
-            //diamonds
-        }
-        
-        if($player1Cards[$i] >= 27 && $player1Cards[$i] <= 39){
-            //hearts
-        }
-        
-        if($player1Cards[$i] >= 40 && $player1Cards[$i] <= 52){
-            //spades
-        }
-    }
     
-    for($i = 0; $i < count($player2Cards); $i++){
-        if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13){
-            //clubs
-        }
-        if($player2CardsCards[$i] >= 14 && $player2Cards[$i] <= 26){
-            //diamonds
-        }
+    // for($i = 0; $i < count($player2Cards); $i++){
+    //     if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13){
+    //         //clubs
+    //     }
+    //     if($player2CardsCards[$i] >= 14 && $player2Cards[$i] <= 26){
+    //         //diamonds
+    //     }
         
-        if($player2Cards[$i] >= 27 && $player2Cards[$i] <= 39){
-            //hearts
-        }
+    //     if($player2Cards[$i] >= 27 && $player2Cards[$i] <= 39){
+    //         //hearts
+    //     }
         
-        if($player2Cards[$i] >= 40 && $player2Cards[$i] <= 52){
-            //spades
-        }
-    }
-    for($i = 0; $i < count($player3Cards); $i++){
-        if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13){
-            //clubs
-        }
-        if($player3CardsCards[$i] >= 14 && $player3Cards[$i] <= 26){
-            //diamonds
-        }
+    //     if($player2Cards[$i] >= 40 && $player2Cards[$i] <= 52){
+    //         //spades
+    //     }
+    // }
+    // for($i = 0; $i < count($player3Cards); $i++){
+    //     if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13){
+    //         //clubs
+    //     }
+    //     if($player3CardsCards[$i] >= 14 && $player3Cards[$i] <= 26){
+    //         //diamonds
+    //     }
         
-        if($player3Cards[$i] >= 27 && $player3Cards[$i] <= 39){
-            //hearts
-        }
+    //     if($player3Cards[$i] >= 27 && $player3Cards[$i] <= 39){
+    //         //hearts
+    //     }
         
-        if($player3Cards[$i] >= 40 && $player3Cards[$i] <= 52){
-            //spades
-        }
-    }
-    for($i = 0; $i < count($user); $i++){
-        if($user[$i] >= 1 && $user[$i] <= 13){
-            //clubs
-        }
-        if($userCards[$i] >= 14 && $user[$i] <= 26){
-            //diamonds
-        }
+    //     if($player3Cards[$i] >= 40 && $player3Cards[$i] <= 52){
+    //         //spades
+    //     }
+    // }
+    // for($i = 0; $i < count($user); $i++){
+    //     if($user[$i] >= 1 && $user[$i] <= 13){
+    //         //clubs
+    //     }
+    //     if($userCards[$i] >= 14 && $user[$i] <= 26){
+    //         //diamonds
+    //     }
         
-        if($user[$i] >= 27 && $user[$i] <= 39){
-            //hearts
-        }
+    //     if($user[$i] >= 27 && $user[$i] <= 39){
+    //         //hearts
+    //     }
         
-        if($user[$i] >= 40 && $user[$i] <= 52){
-            //spades
-        }
-    }
+    //     if($user[$i] >= 40 && $user[$i] <= 52){
+    //         //spades
+    //     }
+    // }
     
 }
 
