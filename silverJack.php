@@ -43,7 +43,8 @@ function displayRandomCard()
    }
    print_r($player1Cards);
    echo "<br><br>";
-    
+   shuffle($deck);
+   
    for ($i = 0; $i < 4; $i++) // Assigning cards for player 2
    {
     	if (in_array($deck[$temp], $used) == false)
@@ -68,7 +69,7 @@ function displayRandomCard()
     }
     print_r($player2Cards);
     echo "<br><br>";
-    
+    shuffle($deck);
     for ($i = 0; $i < 4; $i++) //Assigning cards for player 3
     {
     	if (in_array($deck[$temp], $used) == false)
@@ -93,7 +94,7 @@ function displayRandomCard()
     }
     print_r($player3Cards);
     echo "<br><br>";
-    
+    shuffle($deck);
     for ($i = 0; $i < 4; $i++) //Assigning cards for the user
     {
     	if (in_array($deck[$temp], $used) == false)
@@ -127,9 +128,9 @@ function displayRandomCard()
     	$amount += ($player1Cards[$i] % 13) + 1;
     }
     
-    if ($amount <= 35)
+    if ($amount <= 36)
     {
-    	while ($amount <= 35)
+    	while ($amount <= 36)
     	{
 			if (in_array($deck[$temp], $used) == false)
     		{
@@ -166,9 +167,9 @@ function displayRandomCard()
     	$amount += ($player1Cards[$i] % 13) + 1;
     }
     
-    if ($amount <= 35)
+    if ($amount <= 36)
     {
-    	while ($amount <= 35)
+    	while ($amount <= 36)
     	{
 			if (in_array($deck[$temp], $used) == false)
     		{
@@ -204,9 +205,9 @@ function displayRandomCard()
     	$amount += ($player1Cards[$i] % 13) + 1;
     }
     
-    if ($amount <= 35)
+    if ($amount <= 36)
     {
-    	while ($amount <= 35)
+    	while ($amount <= 36)
     	{
 			if (in_array($deck[$temp], $used) == false)
     		{
@@ -242,9 +243,9 @@ function displayRandomCard()
     	$amount += ($player1Cards[$i] % 13) + 1;
     }
     
-    if ($amount <= 35)
+    if ($amount <= 36)
     {
-    	while ($amount <= 35)
+    	while ($amount <= 36)
     	{
 			if (in_array($deck[$temp], $used) == false)
     		{
@@ -371,59 +372,6 @@ function displayRandomCard()
             echo "<img src='img/cards/spades/" . ($user[$i] % 13 + 1). ".png' />";
         }
     }
-}
-function displayHand()
-{
-    
-    // for($i = 0; $i < count($player2Cards); $i++){
-    //     if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13){
-    //         //clubs
-    //     }
-    //     if($player2CardsCards[$i] >= 14 && $player2Cards[$i] <= 26){
-    //         //diamonds
-    //     }
-        
-    //     if($player2Cards[$i] >= 27 && $player2Cards[$i] <= 39){
-    //         //hearts
-    //     }
-        
-    //     if($player2Cards[$i] >= 40 && $player2Cards[$i] <= 52){
-    //         //spades
-    //     }
-    // }
-    // for($i = 0; $i < count($player3Cards); $i++){
-    //     if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13){
-    //         //clubs
-    //     }
-    //     if($player3CardsCards[$i] >= 14 && $player3Cards[$i] <= 26){
-    //         //diamonds
-    //     }
-        
-    //     if($player3Cards[$i] >= 27 && $player3Cards[$i] <= 39){
-    //         //hearts
-    //     }
-        
-    //     if($player3Cards[$i] >= 40 && $player3Cards[$i] <= 52){
-    //         //spades
-    //     }
-    // }
-    // for($i = 0; $i < count($user); $i++){
-    //     if($user[$i] >= 1 && $user[$i] <= 13){
-    //         //clubs
-    //     }
-    //     if($userCards[$i] >= 14 && $user[$i] <= 26){
-    //         //diamonds
-    //     }
-        
-    //     if($user[$i] >= 27 && $user[$i] <= 39){
-    //         //hearts
-    //     }
-        
-    //     if($user[$i] >= 40 && $user[$i] <= 52){
-    //         //spades
-    //     }
-    // }
-    
 }
 
 function displayWinner()
