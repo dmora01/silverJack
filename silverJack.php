@@ -274,7 +274,71 @@ function displayRandomCard()
 }
 function displayHand()
 {
-    $total = 0;
+    for($i = 0; $i < count($player1Cards); $i++){
+        if($player1Cards[$i] >= 1 && $player1Cards[$i] <= 13){
+            //clubs
+        }
+        if($player1Cards[$i] >= 14 && $player1Cards[$i] <= 26){
+            //diamonds
+        }
+        
+        if($player1Cards[$i] >= 27 && $player1Cards[$i] <= 39){
+            //hearts
+        }
+        
+        if($player1Cards[$i] >= 40 && $player1Cards[$i] <= 52){
+            //spades
+        }
+    }
+    
+    for($i = 0; $i < count($player2Cards); $i++){
+        if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13){
+            //clubs
+        }
+        if($player2CardsCards[$i] >= 14 && $player2Cards[$i] <= 26){
+            //diamonds
+        }
+        
+        if($player2Cards[$i] >= 27 && $player2Cards[$i] <= 39){
+            //hearts
+        }
+        
+        if($player2Cards[$i] >= 40 && $player2Cards[$i] <= 52){
+            //spades
+        }
+    }
+    for($i = 0; $i < count($player3Cards); $i++){
+        if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13){
+            //clubs
+        }
+        if($player3CardsCards[$i] >= 14 && $player3Cards[$i] <= 26){
+            //diamonds
+        }
+        
+        if($player3Cards[$i] >= 27 && $player3Cards[$i] <= 39){
+            //hearts
+        }
+        
+        if($player3Cards[$i] >= 40 && $player3Cards[$i] <= 52){
+            //spades
+        }
+    }
+    for($i = 0; $i < count($user); $i++){
+        if($user[$i] >= 1 && $user[$i] <= 13){
+            //clubs
+        }
+        if($userCards[$i] >= 14 && $user[$i] <= 26){
+            //diamonds
+        }
+        
+        if($user[$i] >= 27 && $user[$i] <= 39){
+            //hearts
+        }
+        
+        if($user[$i] >= 40 && $user[$i] <= 52){
+            //spades
+        }
+    }
     
 }
 
