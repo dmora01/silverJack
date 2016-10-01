@@ -1,9 +1,7 @@
-td {
-    width: 15px;
-    height: 15px;
-}
+
 b{
     font-size: 3em;
+    
 }
 
 function 
@@ -13,7 +11,8 @@ function
 
 c
 {
-    color: red;
+    color: black;
+    font-style: normal;
     font-size: 1em;
 
 }
