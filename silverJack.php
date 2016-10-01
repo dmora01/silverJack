@@ -283,12 +283,12 @@ function displayRandomCard()
     $player3total = 0;
     $usertotal = 0;
     
-    $randPics = array(1,2,3,4);
-    shuffle($randPics);
-    $randPicNum = $randPics[0];
-
+    $usedPics = array();
+    
+     $randPicNum = rand(1,4);
+     
     echo "<img src='img/". $randPicNum. ".jpg' />";
-    unset($randPics[0]);
+
     
     for($i = 0; $i < count($player1Cards); $i++)
     {
@@ -324,12 +324,11 @@ function displayRandomCard()
       $p1Win = displayWinner($player1total);
     echo "<br />";
     
-   shuffle($randPics);
-    $randPicNum = $randPics[1];
-
+ 
+  $randPicNum = rand(1,4);
     echo "<img src='img/". $randPicNum. ".jpg' />";
-    unset($randPics[1]);;
-
+    
+    
     for($i = 0; $i < count($player2Cards); $i++)
     {
         if($player2Cards[$i] >= 1 && $player2Cards[$i] <= 13)
@@ -365,11 +364,10 @@ function displayRandomCard()
 
     echo "<br />";
     
-    shuffle($randPics);
-    $randPicNum = $randPics[2];
+    $randPicNum = rand(1,4);
 
     echo "<img src='img/". $randPicNum. ".jpg' />";
-    unset($randPics[2]);
+
     for($i = 0; $i < count($player3Cards); $i++)
     {
         if($player3Cards[$i] >= 1 && $player3Cards[$i] <= 13)
@@ -404,12 +402,10 @@ function displayRandomCard()
      $p3Win = displayWinner($player3total);
     echo "<br />";
     
-    shuffle($randPics);
-    $randPicNum = $randPics[3];
-    echo "RANDOM NUM: " .$ranPicNum; 
+    $randPicNum = rand(1,4);
 
     echo "<img src='img/". $randPicNum. ".jpg' />";
-    unset($randPics[3]);
+
     
 
     
