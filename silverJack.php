@@ -286,7 +286,7 @@ function displayRandomCard()
     $usedPics = array();
     
      $randPicNum = rand(1,4);
-     
+  
     echo "<img src='img/". $randPicNum. ".jpg' />";
 
     
@@ -326,6 +326,7 @@ function displayRandomCard()
     
  
   $randPicNum = rand(1,4);
+  
     echo "<img src='img/". $randPicNum. ".jpg' />";
     
     
@@ -364,9 +365,10 @@ function displayRandomCard()
 
     echo "<br />";
     
-    $randPicNum = rand(1,4);
-
+     $randPicNum = rand(1,4);
+ 
     echo "<img src='img/". $randPicNum. ".jpg' />";
+
 
     for($i = 0; $i < count($player3Cards); $i++)
     {
